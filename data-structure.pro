@@ -9,4 +9,12 @@ CONFIG -= app_bundle
 
 TEMPLATE = app
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    arbitrage.cpp \
+    bellman-ford.cpp \
+    criticalpath.cpp \
+    dominoeffect.cpp \
+    kruskal.cpp \
+    prim.cpp \
+    theuniquemst.cpp \
+    windowpains.cpp
