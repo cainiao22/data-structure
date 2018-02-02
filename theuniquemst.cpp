@@ -113,7 +113,7 @@ int run()
         scanf("%d, %d", &n, &m);
         for(j=0; j<m; j++)
         {
-            scanf("%d, %d, %d", &, &v, &w);
+            scanf("%d, %d, %d", &u, &v, &w);
             edges[j].u = u-1;
             edges[j].v = v-1;
             edges[j].w = w;

@@ -128,7 +128,7 @@ void CritialPath()
 
 }
 
-int main()
+int run()
 {
     int i, v, u, w; //序号、起点、终点、权重
     scanf("%d,%d", &n, &m);

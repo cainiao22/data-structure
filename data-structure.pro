@@ -17,4 +17,23 @@ SOURCES += main.cpp \
     kruskal.cpp \
     prim.cpp \
     theuniquemst.cpp \
-    windowpains.cpp
+    windowpains.cpp \
+    spfa.cpp \
+    slivercowparty.cpp \
+    wormholes.cpp \
+    floyd.cpp \
+    fibernetwork.cpp \
+    heavycargo.cpp \
+    burnthelinkedcamp.cpp \
+    intervals.cpp \
+    doorman.cpp \
+    playonwords.cpp \
+    domino_euler.cpp \
+    code.cpp \
+    fleury.cpp \
+    ford_fullkerson.cpp \
+    pigs.cpp \
+    drainage_ditches.cpp
+
+HEADERS += \
+    common.h

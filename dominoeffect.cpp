@@ -22,6 +22,8 @@ int s[MAXN]; //两个集合
 
 int path[MAXN];
 
+int dist[MAXN];
+
 int Edge[MAXN][MAXN]; //邻接矩阵
 
 int time[MAXN]; //第i张牌倒下的时间 相当于dist[MAXN];
@@ -65,8 +67,8 @@ void solve_case()
     double max1 = - INF, pos = -1;
     for(int i=0; i<n; i++)
     {
-        time[i] > min;
-        mint = time[i];
+        time[i] > max1;
+        max1 = time[i];
         pos = i;
     }
 
