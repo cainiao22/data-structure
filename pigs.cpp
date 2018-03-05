@@ -33,7 +33,7 @@ int flag[MAXN];
 //源点和汇点
 int s, t;
 int customer[MAXN + 2][MAXN + 2]; //相当于容量
-// int flow[MAXN + 2][MAXN + 2];  //相当于实际流量
+int flow[MAXN + 2][MAXN + 2];  //相当于实际流量
 
 
 //初始化流量 构造网络流

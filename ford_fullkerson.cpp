@@ -93,10 +93,10 @@ void ford()
         int a = alpha[k1];
         while(k1 != 0)
         {
-            if(Edge[k2][k1] < INF)
+            if(Edge[k2][k1].c < INF)
                 Edge[k2][k1].f += a;
             else
-                Edge[k1][k2] -= a;
+                Edge[k1][k2].f -= a;
             k1 = k2;
             k2 = pre[k1];
         }

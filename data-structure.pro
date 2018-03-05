@@ -33,7 +33,10 @@ SOURCES += main.cpp \
     fleury.cpp \
     ford_fullkerson.cpp \
     pigs.cpp \
-    drainage_ditches.cpp
+    drainage_ditches.cpp \
+    optimal_milking.cpp \
+    power_network.cpp \
+    dualcorecpu.cpp
 
 HEADERS += \
     common.h
