@@ -12,4 +12,6 @@ int main(int argc, char *argv[])
     {
         printf("%d\t", flag[i]);
     }
+
+    printf("\n%d\n", 3^1);
 }

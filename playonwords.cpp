@@ -44,5 +44,10 @@ int findParent(int x)
     return s;
 }
 
+void Union(int A, int B)
+{
+    
+}
+
 
 }
