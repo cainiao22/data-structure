@@ -10,7 +10,7 @@ namespace min_max_flow_with_be {
 
 struct ArcType {
     int b, c, f;
-} AccEdge[NMAX + 2][NMAX + 2], Edge[NMAX][NMAX];
+} AccEdge[NMAX + 2][NMAX + 2], Edge[NMAX][NMAX + 2];
 
 
 
@@ -53,11 +53,11 @@ void ford(ArcType network[][NMAX + 2], int s, int t, int max)
                         queue[qe ++] = i;
                         pre[i] = v;
                     }
-                    else if(network[i][v].c < INF && network[i][v].f > network[i][f].b)
+                    else if(network[i][v].c < INF && network[i][v].f > network[i][v].b)
                     {
                         flag[i] = 0;
                         pre[i] = -v;
-                        alpha[i] = MIN(alpha[i], network[i][v].f - network[i][f].b);
+                        alpha[i] = MIN(alpha[i], network[i][v].f - network[i][v].b);
                         queue[qe ++] = i;
                     }
                 }
@@ -89,10 +89,10 @@ void ford(ArcType network[][NMAX + 2], int s, int t, int max)
     {
         for(int j=s; j<=t; j++)
         {
-            if(i == s && network[i][j] < INF)
+            if(i == s && network[i][j].f < INF)
             {
                 maxFlow += network[i][j].f;
-            }else if(i == s && network[j][i] < INF)
+            }else if(i == s && network[j][i].f < INF)
             {
                 maxFlow -= network[j][i].f;
             }
@@ -101,8 +101,9 @@ void ford(ArcType network[][NMAX + 2], int s, int t, int max)
 }
 
 //构造伴随网络
-int accompany()
+void accompany()
 {
+    int s = 0, t= n+1;
     memcpy(AccEdge, Edge, sizeof(Edge));
     for(int i=1; i<=n; i++)
     {

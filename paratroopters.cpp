@@ -90,19 +90,19 @@ int run()
         for(i=1; i<=n; i++)
         {
             scanf("%lf", &c);
-            map[s][i] = log(c);
+            map[s][i].c = log(c);
         }
 
         for(i=1; i<=m; i++)
         {
             scanf("%lf", &c);
-            map[i+n][t] = log(c);
+            map[i+n][t].c = log(c);
         }
 
         for(i=1; i<=l; i++)
         {
             scanf("%d%d", &c, &cc);
-            map[c][n + cc] = INF;
+            map[c][n + cc].c = INF;
         }
 
         printf("%.4f", max_flow());

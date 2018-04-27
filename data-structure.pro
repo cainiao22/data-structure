@@ -36,7 +36,24 @@ SOURCES += main.cpp \
     drainage_ditches.cpp \
     optimal_milking.cpp \
     power_network.cpp \
-    dualcorecpu.cpp
+    dualcorecpu.cpp \
+    paratroopters.cpp \
+    friendship.cpp \
+    min_max_flow_with_behind.cpp \
+    reactorcooling.cpp \
+    budget.cpp \
+    noi2008.cpp \
+    matrixtravels.cpp \
+    hungarian_method.cpp \
+    place_the_roborts.cpp \
+    machine_schedule.cpp \
+    courses.cpp \
+    destroying_the_graph.cpp \
+    spf.cpp \
+    tarjan.cpp \
+    cable_tv_network.cpp \
+    burning_bridges.cpp \
+    knights_of_the_round_table.cpp
 
 HEADERS += \
     common.h

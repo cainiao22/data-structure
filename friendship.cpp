@@ -32,10 +32,10 @@ bool BFS()
         int u = q[qs ++];
         for(int i=0; i<n; i++)
         {
-            if(net[u][i].c > net[u][v].f && !flag[i])
+            if(net[u][i].c > net[u][i].f && !flag[i])
             {
                 dist[i] = dist[u] + 1;
-                q[qe] ++ = i;
+                q[qe ++] = i;
                 if(i == t)
                 {
                     return true;
@@ -60,7 +60,7 @@ int DFS(int v, int low)
             {
                 net[v][i].f += flow;
                 net[i][v].f -= flow;
-                return f;
+                return flow;
             }
         }
     }

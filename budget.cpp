@@ -31,7 +31,7 @@ struct Node {
     int low, high;
 };
 
-int s, t, m;
+int s, t, m, u, v;
 
 int Q[N], D[N];
 
@@ -68,7 +68,7 @@ void DFS()
             {
                 Q[p2 ++] = j;
                 D[j] = D[i] + 1;
-                 if(j == T) return;
+                 if(j == t) return;
             }
         }
 
@@ -84,7 +84,7 @@ int maxFlow()
     while(1)
     {
         DFS();
-        if(D[T] == -1) break;
+        if(D[t] == -1) break;
         memcpy(cur, E, sizeof(E));
         path_n = 0;
 
@@ -124,7 +124,7 @@ int setLimit(int x, int y, char op, int v)
     }
     else if(op == '>')
     {
-        limit[x][y].low = MAX(limit[x][y].low, v + 1);
+        limit[x][y].low = max(limit[x][y].low, v + 1);
     }
     else if(op == '<')
     {
@@ -211,8 +211,8 @@ void solve()
         return;
     }
     memset(E, 0, sizeof(E));
-    S = 0;
-    T = kn + km + 3;
+    s = 0;
+    t = kn + km + 3;
     n = kn + km + 2;
 
     memset(in, 0, sizeof(in));

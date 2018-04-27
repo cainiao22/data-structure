@@ -36,7 +36,7 @@ int compare(const void* a1, const void* a2){
 }
 
 
-void ford(int network[][NMAX+2], int s, int t)
+void ford(ArcType network[][NMAX+2], int s, int t)
 {
     while(1)
     {
@@ -62,7 +62,7 @@ void ford(int network[][NMAX+2], int s, int t)
                         flag[i] = 0;
                         queue[qt ++] = i;
                     }
-                    else if(network[i][v] < INF)
+                    else if(network[i][v].f < INF)
                     {
                         alpha[i] = MIN(alpha[v], network[i][v].f - network[i][v].b);
                         pre[i] = -v;
@@ -138,7 +138,7 @@ void accompany()
             }
         }
 
-        if(sumA > SumB)
+        if(sumA > sumB)
         {
             AccEdge[i][N+1].c = sumA - sumB;
             AccEdge[i][N+1].b = 0;
@@ -188,6 +188,8 @@ void accompany()
             Edge[i][j].f = AccEdge[i][j].f + Edge[i][j].b;
         }
     }
+    
+    
 }
 
 
